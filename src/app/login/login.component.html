@@ -1,0 +1,38 @@
+<div class="w-75 my-5 mx-auto">
+    <h2 class="text-main">Login</h2>
+    <h1  *ngIf="errorMessage"    class="alert alert-danger">{{errorMessage}}</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+      
+        <div class="mb-3">
+        <label>Email:</label>
+        <input formControlName="email" class="form-control">
+         <div class="alert alert-danger" *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched">
+                <p class="text-capitalize fw-bold" *ngIf="loginForm.get('email')?.errors?.['required']">email is required</p>
+                <p class="text-capitalize fw-bold" *ngIf="loginForm.get('email')?.errors?.['email']">it should had the email form (example@gmail.com)</p>
+            </div>
+        </div>
+        <div class="mb-3">
+        <label>password:</label>
+        <input type="password" formControlName="password" class="form-control">
+         <div class="alert alert-danger" *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">
+                <p class="text-capitalize fw-bold" *ngIf="loginForm.get('password')?.errors?.['required']">password is required</p>
+                <ul class="text-capitalize fw-bold" *ngIf="loginForm.get('password')?.errors?.['pattern']">
+                    <li>At least one small character</li>
+                    <li>At least one capital character</li>
+                    <li>At least one number</li>
+                    <li>At least one special character[@, $, ., #, !, %, *, ?, &, ^]</li>
+                    <li>the total length must be in the range [8-15]</li>
+                </ul>
+            </div>
+        </div>
+    
+   <div class="text-end">
+            <button class="btn bg-main text-light px-4" type="submit" [disabled]="loginForm.invalid">Login <i class="fa-solid fa-arrows-spin fa-spin" *ngIf="isloading"></i></button>
+        </div>
+    </form>
+
+</div>
+
+
+
+

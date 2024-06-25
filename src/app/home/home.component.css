@@ -1,0 +1,84 @@
+/* home.component.css */
+
+/* Styling for the header section */
+#Home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.6)),
+                    url('/assets/images/Skaermbillede_2024-02-06_kl._20.21.16.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh; /* Adjust the height as per your requirement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+#Home .text-white {
+  padding: 20px;
+}
+
+#Home .h3 {
+  font-size: 2rem;
+}
+
+#Home .display-3 {
+  font-size: 4rem;
+  margin-top: 10px;
+}
+
+#Home .social-icon {
+  margin-top: 20px;
+}
+
+#Home .social-icon a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+#Home .social-icon a:hover {
+  color: lightgray;
+}
+
+/* Styling for the product section */
+.product {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.product img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.product span {
+  font-weight: bold;
+  color: #333;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+.iam{
+    font-weight: 200px;
+}

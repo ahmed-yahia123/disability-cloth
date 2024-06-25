@@ -1,0 +1,50 @@
+<!-- payment.component.html -->
+
+<section class="w-50 mx-auto bg-light shadow-sm p-4 rounded-3 my-4">
+  <h1 class="text-center mb-4">Pay with card</h1>
+  <form (ngSubmit)="goToPhoto()">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="cardNumber" class="form-label">Card information</label>
+      <input type="text" class="form-control" id="cardNumber" placeholder="1234 1234 1234 1234" required>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="expiryDate" class="form-label">MM / YY</label>
+        <input type="text" class="form-control" id="expiryDate" placeholder="MM / YY" required>
+      </div>
+      <div class="col">
+        <label for="cvc" class="form-label">CVV</label>
+        <input type="text" class="form-control" id="cvc" placeholder="CVV" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="cardholderName" class="form-label">Cardholder name</label>
+      <input type="text" class="form-control" id="cardholderName" required>
+    </div>
+    <div class="mb-3">
+      <label for="country" class="form-label">Country or region</label>
+      <select class="form-select" id="country" required>
+        <option selected>Egypt</option>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+        <option>Australia</option>
+        <option>Germany</option>
+        <option>France</option>
+        <option>Japan</option>
+        <option>China</option>
+        <option>Brazil</option>
+        <option>India</option>
+      </select>
+    </div>
+    <div class="form-check mb-4">
+      <input type="checkbox" class="form-check-input" id="saveInfo">
+      <label class="form-check-label" for="saveInfo">Securely save my information for 1-click checkout</label>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg w-100">Pay</button>
+  </form>
+</section>

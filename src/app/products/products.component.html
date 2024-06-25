@@ -1,0 +1,17 @@
+<section class="ms-3 container-fluid my-4">
+  <h2>Popular Products</h2>
+  <div class="row g-4 py-5 ms-3">
+    <div class="col-md-6 col-lg-4" *ngFor="let item of products">
+      <div class="product text-center">
+        <div class="cursor-pointer" [routerLink]="['/details', item.id]">
+          <img [src]="item.image" alt="{{ item.name }}" class="w-100 mb-3">
+          <h3>{{ item.name }}</h3>
+          <div>
+            <span>{{ item.price }} EGP</span>
+          </div>
+        </div>
+        <button (click)="addToCart(item.id)" class="btn text-white">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</section>

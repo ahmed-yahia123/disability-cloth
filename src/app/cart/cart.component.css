@@ -1,0 +1,82 @@
+.cart-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-item img {
+  border-radius: 5px;
+  margin-right: 20px; /* ترتيب الصورة بجانب المعلومات */
+}
+
+.cart-item-details {
+  flex-grow: 1; /* لتمدد المعلومات لتمتد على العرض المتبقي */
+}
+
+.cart-item-details h5 {
+  margin-bottom: 5px;
+}
+
+.cart-item-details p {
+  margin-bottom: 3px;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* لوضع الزرارين في الناحية اليمنى */
+}
+
+.btn-quantity {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-quantity:hover {
+  opacity: 0.8;
+}
+
+.btn-decrease {
+  background-color: #dc3545; /* اللون الأحمر */
+  color: white;
+}
+
+.btn-increase {
+  background-color: #007bff; /* اللون الأزرق */
+  color: white;
+}
+
+.btn-quantity:focus {
+  outline: none; /* لإزالة الحدود عند الفوكس */
+}
+.btn-remove {
+  background-color: #dc3545; /* اللون الأحمر */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-remove:hover {
+  background-color: #c82333; /* تغيير لون الخلفية عند التحويم */
+}
+.btn-pay-online {
+  background-color: #007bff; /* اللون الأخضر */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-pay-online:hover {
+  background-color: #0056b3; /* تغيير لون الخلفية عند التحويم */
+  transform: scale(1.05);
+}

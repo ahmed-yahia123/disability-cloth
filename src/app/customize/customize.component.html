@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="section-head">
+    <h1 class="text-main text-center ">Customize Your Preference</h1>
+  </div>
+  
+  <!-- Dropdown 1: Abilities -->
+  <div class="dropdown mt-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      {{ selectedAbility }}
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#" (click)="selectAbility($event, 'Physical Disability')">Mobility impairments</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectAbility($event, 'Visual Impairment')">Visual Impairment</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectAbility($event, 'Hearing Impairment')">Sensory processing disorders</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectAbility($event, 'Cognitive Disability')">Amputations: Adaptive clothing with adjustable openings for prosthetics</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectAbility($event, 'Intellectual Disability')">Intellectual Disability</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectAbility($event, 'Autism Spectrum Disorder')">Autism Spectrum Disorder</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectAbility($event, 'Cerebral Palsy')">Cognitive impairments</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectAbility($event, 'Spinal Cord Injury')">Spinal Cord Injury</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectAbility($event, 'Muscular Dystrophy')">Muscular Dystrophy</a></li>
+    </ul>
+  </div>
+
+  <!-- Additional Inputs -->
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="anotherDisability" class="form-label">Another Disability</label>
+        <input type="text" id="anotherDisability" name="anotherDisability" class="form-control" placeholder="Enter another disability">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="clothingSize" class="form-label">Clothing Size</label>
+        <select class="form-select" id="clothingSize" name="clothingSize">
+          <option selected disabled>Select your size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>Extra Large</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown 2: Colors -->
+  <div class="dropdown mt-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+      {{ selectedColor }}
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+      <li><a class="dropdown-item" href="#" (click)="selectColor($event, 'Red')">Red</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectColor($event, 'Blue')">Blue</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectColor($event, 'Pink')">Pink</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectColor($event, 'Purple')">Purple</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectColor($event, 'Green')">Green</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectColor($event, 'Yellow')">Yellow</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectColor($event, 'Black')">Black</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectColor($event, 'White')">White</a></li>
+      <li><a class="dropdown-item" href="#" (click)="selectColor($event, 'Gray')">Gray</a></li>
+    </ul>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="d-flex justify-content-center mt-3">
+    <button (click)="goToContact()" class="btn btn-secondary">Submit</button>
+  </div>
+</div>

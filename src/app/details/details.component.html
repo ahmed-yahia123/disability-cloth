@@ -1,0 +1,18 @@
+<section class="product-details">
+  <div class="row">
+    <div class="col-md-4">
+      <img class="product-image w-100" [src]="productDetails.image" alt="{{productDetails.name}}">
+    </div>
+    <div class="col-md-8">
+      <h3 class="product-name">{{productDetails.name}}</h3>
+      <p class="product-description text-muted">{{productDetails.description}}</p>
+      <div class="product-info">
+        <span class="text-success rounded-pill px-3 py-1">Quantity Left: {{productDetails.qty}}</span>
+      </div>
+      <div class="product-info">
+        <span class="product-price">{{productDetails.price}} EGP</span>
+      </div>
+      <button (click)="addToCart(productDetails.id)" class="add-to-cart-btn mt-3">Add To Cart</button>
+    </div>
+  </div>
+</section>

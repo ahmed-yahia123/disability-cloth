@@ -1,0 +1,14 @@
+<section class="w-75 mx-auto bg-main-light p-3 rounded-3 my-2">
+  <h1>Checkout Session</h1>
+  <form (submit)="onSubmit()">
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number Other</label>
+      <input type="tel" class="form-control" id="phone" [(ngModel)]="phone_number_other" name="phone_number_other" required>
+    </div>
+    <div class="mb-3">
+      <label for="city" class="form-label">Address in details</label>
+      <input type="text" class="form-control" id="city" [(ngModel)]="city" name="city" required>
+    </div>
+    <button type="submit" class="btn-pay-online">Pay With Visa!</button>
+  </form>
+</section>

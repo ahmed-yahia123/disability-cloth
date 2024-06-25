@@ -1,0 +1,28 @@
+<section class="w-75 mx-auto bg-main-light p-3 rounded-3 my-2">
+  <h1>Shopping Cart</h1>
+  <div *ngIf="cartDetails.length > 0; else emptyCart">
+    <div *ngFor="let item of cartDetails" class="cart-item p-3 mb-2 bg-white rounded shadow-sm">
+      <div class="d-flex align-items-center">
+        <img [src]="item.product.image" alt="{{ item.product.name }}" class="img-thumbnail" width="100">
+        <div class="cart-item-details">
+          <h5>{{ item.product.name }}</h5>
+          <p>Price: {{ item.product.price }} EGP</p>
+          <p>Added on: {{ item.created_at | date:'short' }}</p>
+          <button (click)="removeCartItem(item.product_id)" class="btn btn-remove">Remove</button>
+        </div>
+      </div>
+      <div class="cart-item-actions">
+        <button class="btn btn-quantity btn-decrease me-1" (click)="decreaseQuantity(item)">-</button>
+        {{ item.count }}
+        <button class="btn btn-quantity btn-increase ms-1" (click)="increaseQuantity(item)">+</button>
+      </div>
+    </div>
+    <div class="mt-4">
+      <h4>Total Price: {{ totalPrice }} EGP</h4>
+    </div>
+    <button (click)="goToCheckout()" class="btn btn-pay-online">Pay Online Now!</button>
+  </div>
+  <ng-template #emptyCart>
+    <p>Your cart is empty.</p>
+  </ng-template>
+</section>

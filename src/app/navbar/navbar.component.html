@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <!-- Logo or Brand Name -->
+    <a class="navbar-brand" routerLink="home">
+      <img src="../../assets/finalProject assets/ArabWebTools_1716033156.ico" class="w-100" alt="Website Icon">
+    </a>
+
+    <!-- Navbar Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <!-- Home Link -->
+        <a class="nav-link" *ngIf="isLogin" routerLink="home" routerLinkActive="text-main bg-main text-white rounded-pill">Home</a>
+        <!-- Cart Link -->
+        <a class="nav-link" *ngIf="isLogin" routerLink="cart" routerLinkActive="text-main bg-main text-white rounded-pill">Cart</a>
+        <!-- Products Link -->
+        <a class="nav-link" *ngIf="isLogin" routerLink="products" routerLinkActive="text-main bg-main text-white rounded-pill">Products</a>
+        <!-- Contact Link -->
+        <a class="nav-link" *ngIf="isLogin" routerLink="contact" routerLinkActive="text-main bg-main text-white rounded-pill">Contact</a>
+        <a class="nav-link" *ngIf="isLogin" routerLink="customize" routerLinkActive="text-main bg-main text-white rounded-pill">Customize</a>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="justify-content-between d-flex gap-3 align-items-center">
+        <i class="fa-brands fa-facebook cursor-pointer"></i>
+        <i class="fa-brands fa-youtube cursor-pointer"></i>
+        <i class="fa-brands fa-instagram cursor-pointer"></i>
+        <i class="fa-brands fa-behance cursor-pointer"></i>
+        <i class="fa-brands fa-linkedin cursor-pointer"></i>
+        
+        <!-- Login and Register Links -->
+        <a class="nav-link" *ngIf="!isLogin" routerLink="login" routerLinkActive="text-main bg-main text-white rounded-pill">Login</a>
+        <a class="nav-link" *ngIf="!isLogin" routerLink="register" routerLinkActive="text-main bg-main text-white rounded-pill">Register</a>
+        
+        <!-- Logout Link -->
+        <a class="nav-link cursor-pointer" *ngIf="isLogin" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
